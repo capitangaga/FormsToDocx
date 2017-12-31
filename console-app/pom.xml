@@ -7,20 +7,44 @@
         <groupId>kirillgolowko</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>formsToDocx.console-app</artifactId>
 
+    <packaging>jar</packaging>
+
+
     <build>
+        <finalName>FormsToDocx-${project.version}</finalName>
         <plugins>
             <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+
+            <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>ru.kirillgolowko.formsToDocx.consoleApp.Main</mainClass>
+                        </manifest>
+                    </archive>
+
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembley</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
