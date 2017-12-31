@@ -1,8 +1,14 @@
 package ru.kirillgolowko.formsToDocx.consoleApp;
-import ru.kirillgolowko.formsToDocx.core.*;
+
+import ru.kirillgolowko.formsToDocx.consoleApp.util.ApplicationParams;
+import ru.kirillgolowko.formsToDocx.consoleApp.util.ArgumentsParser;
 
 public class Main {
-    public static void main(String[] args){
-        System.out.println("Hello, Forms");
-        }
+    private static ApplicationParams applicationParams;
+
+    public static void main(String[] args) {
+        ArgumentsParser  argumentsParser = new ArgumentsParser(args);
+        applicationParams = argumentsParser.parse();
+    }
+
 }
