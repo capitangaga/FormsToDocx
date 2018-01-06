@@ -1,4 +1,4 @@
-package ru.kirillgolowko.formsToDocx.core;
+package ru.kirillgolowko.formsToDocx.core.tables;
 
 import javafx.util.Pair;
 import org.apache.commons.csv.CSVFormat;
@@ -8,7 +8,6 @@ import org.apache.commons.csv.CSVRecord;
 import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.nio.charset.Charset;
 import java.util.*;
 

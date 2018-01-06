@@ -1,4 +1,4 @@
-package ru.kirillgolowko.formsToDocx.core;
+package ru.kirillgolowko.formsToDocx.core.tables;
 
 import javafx.util.Pair;
 
